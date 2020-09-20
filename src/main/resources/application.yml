@@ -1,0 +1,29 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: validate
+      show_sql: false
+      format_sql: false
+datasources:
+  users:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user_service?useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8
+    username: spoken
+    password: firewalker
+  products:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/product_service?useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8
+    username: spoken
+    password: firewalker
+  reviews:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/review_service?useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8
+    username: spoken
+    password: firewalker
+server:
+  port: 8080
+  servlet:
+    context-path: /
